@@ -8,19 +8,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-    --bg-body: #182436;
-    --bg-card: #1e2d42;
-    --bg-table-header: #243349;
-    --bg-table-row-alt: #1b2940;
-    --border: #2a3f5a;
-    --text: #e8e6e1;
-    --text-muted: #7a8599;
-    --accent: #5bbfaa;
-    --consistent: #5bbfaa;
-    --inconsistent: #c45b5b;
-    --indeterminate: #d4a054;
-    --match: #5bbfaa;
-    --mismatch: #c45b5b;
+    --bg-body: #f8f9fb;
+    --bg-card: #ffffff;
+    --bg-table-header: #f0f2f5;
+    --bg-table-row-alt: #f8f9fb;
+    --border: rgba(0,0,0,0.10);
+    --text: #1a1a1a;
+    --text-muted: #6b7280;
+    --accent: #2563a8;
+    --consistent: #0f766e;
+    --inconsistent: #b91c1c;
+    --indeterminate: #b45309;
+    --match: #0f766e;
+    --mismatch: #b91c1c;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -211,7 +211,7 @@ td.verdict-indeterminate {
 
 .expand-btn.active {
     background: var(--accent);
-    color: var(--bg-body);
+    color: #ffffff;
     border-color: var(--accent);
 }
 
@@ -300,9 +300,9 @@ td.verdict-indeterminate {
     min-width: 40px;
 }
 
-.progress-consistent { background: var(--consistent); color: #182436; }
+.progress-consistent { background: var(--consistent); color: #fff; }
 .progress-inconsistent { background: var(--inconsistent); color: #fff; }
-.progress-indeterminate { background: var(--indeterminate); color: #182436; }
+.progress-indeterminate { background: var(--indeterminate); color: #fff; }
 
 /* Responsive table wrapper */
 .table-wrap {
