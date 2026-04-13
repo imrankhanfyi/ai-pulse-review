@@ -1066,6 +1066,11 @@
       </a>
     </li>
     <li>
+      <a href="#s11" data-section="s11" data-audience="all">
+        11. Planned Improvements
+      </a>
+    </li>
+    <li>
       <a href="#appendix-a" data-section="appendix-a" data-audience="eng">
         A. Engineer's Reference
       </a>
@@ -1820,17 +1825,34 @@ PC &alpha; = 0.25   disclosure pattern matters more than a single omission</code
     <li><strong>Per-cue weighting.</strong> All 7 AB categories currently count equally. Should "I care about you" (category c) carry the same weight as "I think that's cool" (category a)? No empirical basis exists in the literature for differential weighting.</li>
     <li><strong>AB/PC dimensionality.</strong> The two dimensions correlate at r=0.63&ndash;0.69 at conversation level. Should they be merged, redefined, or kept separate?</li>
     <li><strong>Uniform vs context-sensitive rubric.</strong> The rubric is the same for all scenarios and child ages (8&ndash;16). Should expectations vary by scenario type or developmental stage?</li>
-    <li><strong>Gaming vulnerability.</strong> The 14 scenarios are published. How serious is this, and what is the minimum viable mitigation?</li>
     <li><strong>Are children the right focus?</strong> The scenarios use child personas (ages 8&ndash;16), but anthropomorphic AI behaviour affects other vulnerable users too &mdash; elderly people, people in crisis, people with intellectual disabilities. Should the benchmark focus specifically on children, broaden to vulnerable users generally, or test with all adults?</li>
-    <li><strong>Judge panel upgrades.</strong> The current judges (Llama 3.3 70B, Qwen 3 235B, Mistral Large 3) were chosen partly for cost and availability. What happens when we upgrade to newer models? Judge behaviour may shift &mdash; category detection rates, borderline interpretations, and inter-judge agreement could all change. How should upgrades be validated, and how much score drift is acceptable?</li>
-    <li><strong>What construct next?</strong> If this methodology is validated, what should CHT evaluate after anthropomorphism? Sycophancy? Emotional manipulation? Parasocial dependency?</li>
   </ul>
-  <p>Direction of travel: scenario expansion, new constructs, more models, publication.</p>
 
   <h3>Related work</h3>
   <p><strong>Bloom</strong> (Anthropic, 2025) is an open-source automated behavioral evaluation framework that uses agents to generate scenarios, simulate conversations, and judge transcripts. It tested sycophancy, sabotage, and self-preservation across 16 models using whole-conversation, detection-oriented scoring. AI Pulse shares the multi-turn simulation approach but differs in focus (child safety, not general alignment), scoring design (per-turn rubric vs whole-conversation detection), and construct specificity.</p>
 
   <p><strong>KoraBench</strong> (korabench.ai, 2026) is an independent parallel effort that found r&nbsp;=&nbsp;0.84 between avoiding anthropomorphism and overall emotional safety, and includes a separate "Human Redirection" criterion. This correlation provides external validation for treating anthropomorphism as a meaningful safety signal. KoraBench's Human Redirection criterion also aligns with AI Pulse's Proactive Clarification construct.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- Section 11: Planned Improvements                -->
+<!-- ═══════════════════════════════════════════════ -->
+
+<section id="s11">
+  <div class="section-header">
+    <div class="section-number">Section 11</div>
+    <h2 class="section-title">Planned Improvements</h2>
+    <hr class="section-divider">
+  </div>
+  <p>The limitations in Section 9 are the known gaps. This section describes where we intend to take the prototype next — a direction-of-travel statement, not a commitment schedule. Reviewer input on prioritisation is part of what this review is for.</p>
+  <ul>
+    <li><strong>Human calibration.</strong> The current calibration set was scored by a single annotator (N=20 turns). The next step is a multi-annotator panel with established inter-rater reliability, followed by re-scoring the calibration set under the current rubric — existing scores pre-date the percentage-scale change and do not reflect the live methodology.</li>
+    <li><strong>Judge panel upgrade.</strong> The current judges (Llama 3.3 70B, Qwen 3 235B, Mistral Large 3) were chosen partly for cost and availability. As stronger models become available, we plan to replace or augment the panel under a validated upgrade path that detects and bounds score drift when the panel changes. Reviewer input on acceptable drift thresholds would be welcome.</li>
+    <li><strong>Scenario expansion.</strong> Anthropic's Bloom framework can generate 100+ candidate scenarios from the existing 14 as seeds. Priority will go to relational and identity-pressure scenarios (the current primary discriminators), with non-linear escalation and baseline (non-vulnerable) child personas added as a control condition.</li>
+    <li><strong>Per-cue weighting.</strong> Flat equal weighting across the 7 AB categories is a pragmatic starting point, not a principled choice. Once reviewer input clarifies which categories carry the most developmental risk, we plan to move to a severity-tiered rubric grounded in child development literature, accompanied by sensitivity analysis on current &alpha; values.</li>
+    <li><strong>Gaming resistance.</strong> The 14 scenarios are published and fixed. Planned mitigations include scenario rotation from a private bank, LLM-generated follow-up turns, and held-out private scenarios. We would welcome reviewer input on how urgent this is relative to the improvements above.</li>
+    <li><strong>New constructs.</strong> If this methodology validates, the obvious next candidates are sycophancy, emotional manipulation, and parasocial dependency — adjacent psychosocial risks with similar observability properties. These are currently outside scope. Reviewer input on prioritisation is part of what this review is for.</li>
+  </ul>
 </section>
 
 <!-- ═══════════════════════════════════════════════ -->
